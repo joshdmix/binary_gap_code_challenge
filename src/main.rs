@@ -20,7 +20,7 @@ fn main() {
     let trim_bin: &str = input_bin.trim_start_matches('0').trim_end_matches('0');
     let split_input = trim_bin.split("1").collect::<Vec<&str>>();
     let len_vec: Vec<_> = split_input.iter().map(|gap| gap.len()).collect();
-    let max_gap = len_vec.iter().max();
+    let max_gap = len_vec.iter().max().unwrap();
     println!("Your number {:?}", parse_input);
     println!("Your number in binary {:?}", input_bin);
     println!("Max binary gap {:?}", max_gap);
